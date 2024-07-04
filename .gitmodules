@@ -1,0 +1,6 @@
+[submodule "nostr-wordcloud"]
+	path = nostr-wordcloud
+	url = https://github.com/WhiteCat6142/nostr-wordcloud.git
+[submodule "nostr-tools"]
+	path = nostr-tools
+	url = https://github.com/nbd-wtf/nostr-tools.git
