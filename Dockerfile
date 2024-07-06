@@ -2,6 +2,8 @@ ARG ROOT_CONTAINER=oven/bun:1.1.18-slim
 
 FROM $ROOT_CONTAINER
 
+LABEL maintainer="WhiteCat6142 <whitecat6142+git@gmail.com>"
+
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN --mount=type=cache,target=/var/lib/apt/lists \
@@ -13,7 +15,8 @@ RUN --mount=type=cache,target=/var/lib/apt/lists \
     curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh -o ./install.sh && \
     bash ./install.sh --no-tty --accept-all-defaults
 
-RUN git clone https://github.com/WhiteCat6142/wordcloudbot.git --recursive --depth 1 && \
+RUN --mount=type=cache,mode=0755,target=/root/.cache/pip && \
+    git clone https://github.com/WhiteCat6142/wordcloudbot.git --recursive --depth 1 && \
     cd wordcloudbot && \
     cp nostr-tools/package.json package.json && \
     bun install && \
