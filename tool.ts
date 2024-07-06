@@ -1,4 +1,4 @@
-import { getPublicKey } from 'nostr-tools/pure'
+import { getPublicKey } from './nostr-tools/pure'
 import { bytesToHex, hexToBytes } from '@noble/hashes/utils'
 import { useWebSocketImplementation, Relay } from './nostr-tools/relay'
 import WebSocket from 'ws'
