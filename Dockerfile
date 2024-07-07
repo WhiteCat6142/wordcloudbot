@@ -6,7 +6,7 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
     git bash python3-pip curl && \
     curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh -o ./install.sh && \
-    bash ./install.sh --no-tty --accept-all-defaults --python-install-location /usr/lib/python3.9
+    bash ./install.sh --no-tty --accept-all-defaults
 
 RUN --mount=type=cache,mode=0755,target=/root/.cache/pip \
     git clone https://github.com/WhiteCat6142/wordcloudbot.git --recursive --depth 1 && \
