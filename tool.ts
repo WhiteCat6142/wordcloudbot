@@ -1,6 +1,6 @@
 import { getPublicKey } from './nostr-tools/pure'
 import { bytesToHex, hexToBytes } from '@noble/hashes/utils'
-import * as nip19 from 'nostr-tools/nip19'
+import * as nip19 from './nostr-tools/nip19'
 import { useWebSocketImplementation, Relay } from './nostr-tools/relay'
 import WebSocket from 'ws'
 useWebSocketImplementation(WebSocket)
