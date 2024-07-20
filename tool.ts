@@ -19,7 +19,7 @@ function push(t: number): void{
       proc.unref();
 }
 
-let last = now()
+let last = 0
 const req1 = {kinds: [1], "#p":[pk], since:now()}
 const sub = relay.subscribe([req1], {
   onevent(ev) {
